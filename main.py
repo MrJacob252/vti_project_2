@@ -72,7 +72,7 @@ def graph_choice(prime_list):
         print("Which graph to draw?")
         print("[1] - Ulam spiral")
         print("[2] - Sack spiral ")
-        print("[8] - Generate numbers in python (only for comparison)")
+        print("[3] - Generate numbers in python (only for comparison)")
         print("[9] - Generate new prime number list")
         print("[0] - Quit")
 
@@ -91,7 +91,7 @@ def graph_choice(prime_list):
             case 2:
                 sack_spiral(prime_list)
             # Generator from school for 'benchmark purposes'
-            case 8:
+            case 3:
                 old_prime_gen.py_prime()
             # Generate primes again
             case 9:
