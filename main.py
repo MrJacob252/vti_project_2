@@ -1,6 +1,7 @@
 import vti_project_2
 import numpy as np
 import matplotlib.pyplot as plt
+import old_prime_gen
 
 def round_up(number, order):
     '''
@@ -40,7 +41,7 @@ def ulam_spiral(num_list):
     ax = polar_plotter(last_prime, name)
     
     # ax.scatter(theta, r, size_of_dot)   
-    ax.scatter(num_list, num_list, s=0.1)
+    ax.scatter(num_list, num_list, s=0.15, c='purple')
     
     plt.show()
     
@@ -58,7 +59,7 @@ def sack_spiral(num_list):
     ax = polar_plotter(last_prime, name)
     
     # ax.scatter(theta, r, size_of_dot)
-    ax.scatter(np.sqrt(num_list) * 2 * np.pi ,np.sqrt(num_list), s=0.5, c='purple')
+    ax.scatter(np.sqrt(num_list) * 2 * np.pi ,np.sqrt(num_list), s=0.25, c='purple')
     
     plt.show()
         
@@ -71,6 +72,7 @@ def graph_choice(prime_list):
         print("Which graph to draw?")
         print("[1] - Ulam spiral")
         print("[2] - Sack spiral ")
+        print("[8] - Generate numbers in python (only for comparison)")
         print("[9] - Generate new prime number list")
         print("[0] - Quit")
 
@@ -88,6 +90,10 @@ def graph_choice(prime_list):
             # Sack Spiral
             case 2:
                 sack_spiral(prime_list)
+            # Generator from school for 'benchmark purposes'
+            case 8:
+                old_prime_gen.py_prime()
+            # Generate primes again
             case 9:
                 prime_list = np.array(vti_project_2.prime_num_gen())
             # Exit
