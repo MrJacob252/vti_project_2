@@ -9,15 +9,15 @@ mod prime_gen;
 // }
 
 #[pyfunction]
-fn prime_num_gen() -> PyResult<Vec<u64>> {
+fn prime_num_gen() -> PyResult<Vec<u128>> {
     //! Call to the prime generating module
-    let prime_list:Vec<u64> = prime_gen::main_primes();
+    let prime_list:Vec<u128> = prime_gen::main_primes();
     Ok(prime_list)  
 }
 
 /// A Python module implemented in Rust.
 #[pymodule]
-fn project_2_prime_graph(_py: Python, m: &PyModule) -> PyResult<()> {
+fn VTI_project_2(_py: Python, m: &PyModule) -> PyResult<()> {
     // m.add_function(wrap_pyfunction!(sum_as_string, m)?)?;
     m.add_function(wrap_pyfunction!(prime_num_gen, m)?)?;
     Ok(())
