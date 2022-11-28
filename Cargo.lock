@@ -3,13 +3,6 @@
 version = 3
 
 [[package]]
-name = "VTI_project_2"
-version = "0.1.0"
-dependencies = [
- "pyo3",
-]
-
-[[package]]
 name = "autocfg"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -214,6 +207,13 @@ name = "unindent"
 version = "0.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "58ee9362deb4a96cef4d437d1ad49cffc9b9e92d202b6995674e928ce684f112"
+
+[[package]]
+name = "vti_project_2"
+version = "0.1.0"
+dependencies = [
+ "pyo3",
+]
 
 [[package]]
 name = "windows-sys"

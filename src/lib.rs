@@ -17,7 +17,7 @@ fn prime_num_gen() -> PyResult<Vec<u128>> {
 
 /// A Python module implemented in Rust.
 #[pymodule]
-fn VTI_project_2(_py: Python, m: &PyModule) -> PyResult<()> {
+fn vti_project_2(_py: Python, m: &PyModule) -> PyResult<()> {
     // m.add_function(wrap_pyfunction!(sum_as_string, m)?)?;
     m.add_function(wrap_pyfunction!(prime_num_gen, m)?)?;
     Ok(())

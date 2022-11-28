@@ -1,4 +1,4 @@
-import project_2_prime_graph
+import vti_project_2
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -61,17 +61,6 @@ def sack_spiral(num_list):
     ax.scatter(np.sqrt(num_list) * 2 * np.pi ,np.sqrt(num_list), s=0.5, c='purple')
     
     plt.show()
-    
-def prottest(num_list):
-    name = 'TEST'
-    
-    last_prime = num_list[-1]
-    
-    ax = polar_plotter(last_prime, name)
-    
-    ax.plot(num_list, num_list)
-    
-    plt.show()
         
 def graph_choice(prime_list):
     '''
@@ -100,7 +89,7 @@ def graph_choice(prime_list):
             case 2:
                 sack_spiral(prime_list)
             case 9:
-                prime_list = np.array(project_2_prime_graph.prime_num_gen())
+                prime_list = np.array(vti_project_2.prime_num_gen())
             # Exit
             case 0:
                 break
@@ -112,11 +101,9 @@ def graph_choice(prime_list):
 def main():
     # Calls a Rust module that generates prime numbers and returns Python list
     # Stores them as numpy array 
-    prime_list = np.array(project_2_prime_graph.prime_num_gen())
+    prime_list = np.array(vti_project_2.prime_num_gen())
     
     graph_choice(prime_list)
-    
-    prottest(prime_list)
 
 
 if __name__ == "__main__":
